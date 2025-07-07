@@ -138,9 +138,10 @@
       <!-- Optional: Prevent spam bots -->
       <input type="hidden" name="_captcha" value="false">
 	<input type="hidden" name="_next"
-		value="https://brijeshvalsaraj.github.io/Portfolio/reservation.html">
+		value="https://brijeshvalsaraj.github.io/Portfolio/contact.html">
       <!-- Optional: Redirect after submission -->
       <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
+	<input type="hidden" name="_next" value="https://brijeshvalsaraj.github.io/Portfolio/contact.html?success=1">
     </form>
   </div>
 </div>
@@ -192,6 +193,24 @@
 	<script src="js/jquery.flexslider-min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+	<script>
+  // Function to get query parameters
+  function getQueryParam(param) {
+    var params = new URLSearchParams(window.location.search);
+    return params.get(param);
+  }
+
+  // Show alert if 'success' parameter is present
+  if (getQueryParam('success') === '1') {
+    alert("Thank you for your message, I'll get back to you as soon as possible.");
+    // Optional: Remove the query param from the URL after showing the alert
+    if (window.history.replaceState) {
+      const url = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.history.replaceState({path: url}, '', url);
+    }
+  }
+</script>
 
 	</body>
 </html>
