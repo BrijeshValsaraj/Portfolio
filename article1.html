@@ -45,12 +45,13 @@
   <div class="container" style="margin-top: 40px;">
     <article>
       <h1 class="text-center">Eventually, it's just a Memory</h1>
-      <div class="d-flex justify-content-between align-items-center mb-3 w-100">
-    <p class="mb-0"><em>Brijesh Valsaraj</em></p>
-    <a href="reservation.html" class="btn btn-outline-light btn-sm" style="font-weight: bold;">
-      &larr; My Writings
-    </a>
-  </div>
+    <div class="d-flex justify-content-between align-items-center mb-3" style="display: flex; justify-content: space-between; align-items: center;">
+  <p class="mb-0" style="margin: 0;"><em>Brijesh Valsaraj</em></p>
+  <a href="reservation.html" class="btn btn-outline-light btn-sm" style="font-weight: bold;">
+    &larr; My Writings
+  </a>
+</div>
+
       <img src="images/d86ea2b225cf3d2b760cb92d71a7c22e.jpg" alt="Article Image" class="img-fluid mb-3">
 
       <p>
@@ -75,20 +76,13 @@
 </div>  
 </div>
 </div>
-.d-flex {
-  display: flex !important;
+.d-flex > p,
+.d-flex > a {
+  width: auto !important;
+  display: inline !important;
+  margin: 0 !important;
 }
-.justify-content-between {
-  justify-content: space-between !important;
-}
-.align-items-center {
-  align-items: center !important;
-}
-.d-flex > p, .d-flex > a {
-  flex-grow: 0;
-  width: auto;
-  margin: 0;
-}
+
 
 </body>
 </html>
