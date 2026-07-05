@@ -1,0 +1,10 @@
+- name: Checkout Repository
+  uses: actions/checkout@v6
+
+# ... your build steps ...
+
+- name: Upload Artifacts
+  uses: actions/upload-artifact@v7
+  with:
+    name: website-dist
+    path: dist/
